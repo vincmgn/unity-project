@@ -6,13 +6,14 @@ public class Knockback : MonoBehaviour
 {
     public bool gettingKnockedBack { get; private set; }
 
-    [SerializeField] private float knockbackTime = 0.1f;
+    [SerializeField] private float knockbackTime = 5; // 5 = 0.1s, 4 = 0.08s ...
 
     private Rigidbody2D rb;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        knockbackTime /= 50;
     }
 
     public void GetKnockedBack(Transform damageSource, float knocBackThrust)

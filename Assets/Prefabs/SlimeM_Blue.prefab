@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 7974450948803602391}
   - component: {fileID: 3329201517498085157}
   - component: {fileID: 693062786772190721}
+  - component: {fileID: 4127694986688997043}
+  - component: {fileID: 3890054901456718985}
   m_Layer: 0
   m_Name: SlimeM_Blue
   m_TagString: Untagged
@@ -211,3 +213,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 30
+--- !u!114 &4127694986688997043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3202857304975688862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eafc33ed09c027343bc003363bd830f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackTime: 4
+--- !u!114 &3890054901456718985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3202857304975688862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceaee13581355b940acb76796b8d8618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: a9ff66a56bc0d1e449fc18d9dca2218e, type: 2}
+  flashDuration: 0.1
