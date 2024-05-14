@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         PlayerInput();
+        AttackInput();
     }
 
     private void FixedUpdate()
@@ -40,10 +41,18 @@ public class PlayerController : MonoBehaviour
 
     private void PlayerInput()
     {
-        movement = playerControls.Movement.Move.ReadValue<Vector2>();
+        movement = playerControls.Player.Move.ReadValue<Vector2>();
 
         animator.SetFloat("moveX", movement.x);
         animator.SetFloat("moveY", movement.y);
+    }
+
+    private void AttackInput()
+    {
+        if (playerControls.Player.Attack.triggered)
+        {
+            animator.SetTrigger("Attack");
+        }
     }
 
     private void Move()
