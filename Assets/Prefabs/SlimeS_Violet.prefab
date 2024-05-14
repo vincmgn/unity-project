@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8477884597263079873}
   - component: {fileID: 1405068326886116475}
   - component: {fileID: 4201612949618183136}
+  - component: {fileID: 4868415839728287630}
   m_Layer: 0
   m_Name: SlimeS_Violet
   m_TagString: Untagged
@@ -211,3 +212,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+--- !u!114 &4868415839728287630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255079029975702652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eafc33ed09c027343bc003363bd830f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackTime: 0.1
