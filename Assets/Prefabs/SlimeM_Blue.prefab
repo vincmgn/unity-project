@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2007698132582531713}
   - component: {fileID: 4813329710725385210}
   - component: {fileID: 6307698369347824197}
+  - component: {fileID: 3659474321709695326}
   - component: {fileID: 7974450948803602391}
   - component: {fileID: 3329201517498085157}
-  - component: {fileID: 3659474321709695326}
+  - component: {fileID: 693062786772190721}
   m_Layer: 0
   m_Name: SlimeM_Blue
   m_TagString: Untagged
@@ -151,6 +152,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &3659474321709695326
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3202857304975688862}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 545e95e8d00d1d64fb2bf9a8bf186caf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &7974450948803602391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,24 +198,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
---- !u!95 &3659474321709695326
-Animator:
-  serializedVersion: 5
+--- !u!114 &693062786772190721
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3202857304975688862}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 545e95e8d00d1d64fb2bf9a8bf186caf, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579ffcf1c9617404e9cdfb29c7803222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30

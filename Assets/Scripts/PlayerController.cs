@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private Transform weaponCollider;
 
     private PlayerControls playerControls;
     private Vector2 movement;
@@ -52,7 +53,13 @@ public class PlayerController : MonoBehaviour
         if (playerControls.Player.Attack.triggered)
         {
             animator.SetTrigger("Attack");
+            weaponCollider.gameObject.SetActive(true);
         }
+    }
+
+    public void OnAttackAnimationEnd()
+    {
+        weaponCollider.gameObject.SetActive(false);
     }
 
     private void Move()
@@ -68,10 +75,12 @@ public class PlayerController : MonoBehaviour
         if (mousePos.x < playerScreenPoint.x)
         {
             spriteRenderer.flipX = true;
+            weaponCollider.transform.rotation = Quaternion.Euler(0, 180, 0);
         }
         else
         {
             spriteRenderer.flipX = false;
+            weaponCollider.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 }
