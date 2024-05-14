@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3669066026695471484}
   - component: {fileID: 4671145806165138668}
   - component: {fileID: 4218347103619196471}
+  - component: {fileID: 8012232002319425154}
   m_Layer: 0
   m_Name: SlimeL_Red
   m_TagString: Untagged
@@ -224,4 +225,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eafc33ed09c027343bc003363bd830f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackTime: 0.1
+  knockbackTime: 5
+--- !u!114 &8012232002319425154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3289124319275974834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceaee13581355b940acb76796b8d8618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: a9ff66a56bc0d1e449fc18d9dca2218e, type: 2}
+  flashDuration: 0.1
