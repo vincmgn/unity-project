@@ -8,7 +8,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private int maxHealth = 100;
 
     private int currentHealth;
-    //private Animator animator;
+    private Animator animator;
     private Knockback knockback;
     private Flash flash;
 
@@ -16,11 +16,11 @@ public class EnemyHealth : MonoBehaviour
     {
         knockback = GetComponent<Knockback>();
         flash = GetComponent<Flash>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
     {
-        //animator = GetComponent<Animator>();
         currentHealth = maxHealth;
     }
 
@@ -35,16 +35,16 @@ public class EnemyHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            //animator.SetTrigger("Death");
+            animator.SetTrigger("Death");
             StartCoroutine(DestroyAfterAnimation()); // delai avant de détruire l'objet
         }
     }
 
     private IEnumerator DestroyAfterAnimation()
     {
-        //yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length); // reprend la durée de l'animation dans les infos de l'animation
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length); // reprend la durée de l'animation dans les infos de l'animation
 
-        yield return new WaitForSeconds(1);
+        //yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
 }
