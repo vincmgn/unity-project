@@ -9,13 +9,17 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private Transform weaponCollider;
+    [SerializeField] private float dashSpeed = 4f;
+    [SerializeField] private TrailRenderer trailRenderer;
 
     private PlayerControls playerControls;
     private Vector2 movement;
     private Rigidbody2D rb;
-
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private float startingMoveSpeed;
+
+    private bool isDashing;
 
     private void Awake()
     {
@@ -24,6 +28,12 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        playerControls.Player.Dash.performed += _ => Dash();
+        startingMoveSpeed = moveSpeed;
     }
 
     private void OnEnable()
@@ -86,4 +96,27 @@ public class PlayerController : MonoBehaviour
             weaponCollider.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
+
+    private void Dash()
+    {
+        if (!isDashing)
+        {
+            isDashing = true;
+            moveSpeed *= dashSpeed;
+            trailRenderer.emitting = true;
+            StartCoroutine(DashCooldown());
+        }
+    }
+
+    private IEnumerator DashCooldown()
+    {
+        float dashTime = 0.2f;
+        float dashCooldown = 0.25f;
+        yield return new WaitForSeconds(dashTime);
+        moveSpeed = startingMoveSpeed;
+        yield return new WaitForSeconds(dashCooldown);
+        isDashing = false;
+        trailRenderer.emitting = false;
+    }
+
 }
