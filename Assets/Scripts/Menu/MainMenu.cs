@@ -6,13 +6,10 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public string sceneName;
-    public AudioManager audioManager;
-
 
     public void ChangeScene()
     {
         SceneManager.LoadScene(sceneName);
-        audioManager.MuteHandler();
 
     }
 
