@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b77329e0edc2b43831ec068755dc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Game
+  sceneName: EntryGame
 --- !u!1 &59318151
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,6 +806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music: {fileID: 1102644521}
   cross: {fileID: 2026909516}
+  isMuted: 0
 --- !u!1 &170488953
 GameObject:
   m_ObjectHideFlags: 0
