@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UIFade : Singleton<UIFade>
 {
+    [SerializeField] private GameObject fadeCanvas;
     [SerializeField] private Image fadeScreen;
     [SerializeField] private float fadeSpeed = 1f;
 
@@ -17,6 +18,7 @@ public class UIFade : Singleton<UIFade>
             StopCoroutine(fadeRoutine);
         }
 
+        fadeCanvas.SetActive(true);
         fadeRoutine = FadeRoutine(1);
         StartCoroutine(fadeRoutine);
     }
@@ -28,6 +30,7 @@ public class UIFade : Singleton<UIFade>
             StopCoroutine(fadeRoutine);
         }
 
+        fadeCanvas.SetActive(false);
         fadeRoutine = FadeRoutine(0);
         StartCoroutine(fadeRoutine);
     }
