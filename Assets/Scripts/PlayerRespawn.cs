@@ -24,6 +24,8 @@ public class PlayerRespawn : MonoBehaviour
             if (respawnPoint != null)
             {
                 PlayerController.Instance.transform.position = respawnPoint.transform.position;
+                CameraController.Instance.SetPlayerCameraFollow();
+
             }
             else
             {
