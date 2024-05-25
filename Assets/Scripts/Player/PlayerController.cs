@@ -79,6 +79,16 @@ public class PlayerController : Singleton<PlayerController>
         rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
     }
 
+    public void SetMoveSpeed(float speed)
+    {
+        moveSpeed = speed;
+    }
+
+    public void ResetMoveSpeed()
+    {
+        moveSpeed = startingMoveSpeed;
+    }
+
     private void AdjustPlayerFacingDirection()
     {
         Vector3 mousePos = Input.mousePosition;

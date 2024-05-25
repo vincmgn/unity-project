@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -29,6 +27,8 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(gameSceneName);
+        PauseMenuPanel.SetActive(false);
+        pauseButton.SetActive(true);
     }
 
     public void BackToMenu()
