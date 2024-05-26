@@ -2055,6 +2055,7 @@ GameObject:
   - component: {fileID: 514653210}
   - component: {fileID: 514653212}
   - component: {fileID: 514653211}
+  - component: {fileID: 514653213}
   m_Layer: 5
   m_Name: Inventory (1)
   m_TagString: Untagged
@@ -2121,6 +2122,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514653209}
   m_CullTransparentMesh: 1
+--- !u!114 &514653213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514653209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5487bff06681043adbe26456ed8722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponInfo: {fileID: 11400000, guid: 2231a9a14d6cae7498b76d35070b4da5, type: 2}
 --- !u!1 &516211822 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 150860, guid: df93da55c6ab79e40b5edf0196e909b4, type: 3}
@@ -4299,6 +4313,7 @@ GameObject:
   - component: {fileID: 966547420}
   - component: {fileID: 966547422}
   - component: {fileID: 966547421}
+  - component: {fileID: 966547423}
   m_Layer: 5
   m_Name: Inventory (4)
   m_TagString: Untagged
@@ -4365,6 +4380,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966547419}
   m_CullTransparentMesh: 1
+--- !u!114 &966547423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966547419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5487bff06681043adbe26456ed8722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponInfo: {fileID: 0}
 --- !u!1 &977031590
 GameObject:
   m_ObjectHideFlags: 0
@@ -9478,6 +9506,7 @@ GameObject:
   - component: {fileID: 1514516139}
   - component: {fileID: 1514516141}
   - component: {fileID: 1514516140}
+  - component: {fileID: 1514516142}
   m_Layer: 5
   m_Name: Inventory (3)
   m_TagString: Untagged
@@ -9544,6 +9573,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514516138}
   m_CullTransparentMesh: 1
+--- !u!114 &1514516142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514516138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5487bff06681043adbe26456ed8722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponInfo: {fileID: 0}
 --- !u!1 &1530322207
 GameObject:
   m_ObjectHideFlags: 0
@@ -19008,6 +19050,7 @@ GameObject:
   - component: {fileID: 1940292648}
   - component: {fileID: 1940292650}
   - component: {fileID: 1940292649}
+  - component: {fileID: 1940292651}
   m_Layer: 5
   m_Name: Inventory (2)
   m_TagString: Untagged
@@ -19074,6 +19117,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940292647}
   m_CullTransparentMesh: 1
+--- !u!114 &1940292651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940292647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5487bff06681043adbe26456ed8722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponInfo: {fileID: 11400000, guid: 48215ab58a98a2d468d4411e59e9a35c, type: 2}
 --- !u!1 &1953073436
 GameObject:
   m_ObjectHideFlags: 0
@@ -19548,6 +19604,7 @@ GameObject:
   - component: {fileID: 2052788446}
   - component: {fileID: 2052788448}
   - component: {fileID: 2052788447}
+  - component: {fileID: 2052788449}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -19614,6 +19671,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052788445}
   m_CullTransparentMesh: 1
+--- !u!114 &2052788449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052788445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5487bff06681043adbe26456ed8722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponInfo: {fileID: 11400000, guid: bd985d62228189f43a00bd192ecbd79c, type: 2}
 --- !u!1001 &2057077103
 PrefabInstance:
   m_ObjectHideFlags: 0
