@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 980299506322056589}
   - component: {fileID: 8322261183205565650}
   - component: {fileID: 6539436296571143163}
+  - component: {fileID: 5881902773286040845}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -358,7 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13af96daff7d3f1408b597a6f176fdf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 3
   dashSpeed: 4
   trailRenderer: {fileID: 1132992643693796727}
   weaponCollider: {fileID: 6187935264407068300}
@@ -404,6 +405,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackTime: 4
+--- !u!114 &5881902773286040845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3080828170145164560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a46dc67c03e7e499f8dcf1cf963a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7988307689567969611
 GameObject:
   m_ObjectHideFlags: 0
