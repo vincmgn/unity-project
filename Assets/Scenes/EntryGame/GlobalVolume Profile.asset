@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f09c344364799504ca43baaccfb4eb57, type: 3}
-  m_Name: Staff
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: GlobalVolume Profile
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 8316224693409015736, guid: 280b1a720364d2e4ebb67491d2b9e894, type: 3}
-  weaponCooldown: 0.6
+  components: []
