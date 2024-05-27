@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 3590076672957130973}
   - component: {fileID: 5293528936410546819}
   m_Layer: 0
-  m_Name: Weapon Collider
+  m_Name: SwordCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,7 +120,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  dashSpeed: 4
+  dashSpeed: 3
   trailRenderer: {fileID: 1132992643693796727}
   weaponCollider: {fileID: 6187935264407068300}
 --- !u!114 &980299506322056589
