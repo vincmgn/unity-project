@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5031312967482950693}
   - component: {fileID: 3242586564902864017}
-  - component: {fileID: 5908482547003937252}
+  - component: {fileID: 1301207878374570272}
   - component: {fileID: 4374519998073600009}
   - component: {fileID: 9007063665001768484}
   - component: {fileID: 6305787813462845974}
   m_Layer: 0
-  m_Name: Gold Coin
+  m_Name: TeleportStone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.85480356, y: -0.6365862, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,18 +77,18 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2082921680, guid: 64a52733ed9f42340922afbde6ea39b7, type: 3}
+  m_Sprite: {fileID: -779925871, guid: 726dfe101549eef46b6c2462b7bf8b68, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.962963}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &5908482547003937252
+--- !u!95 &1301207878374570272
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 8029046237835210437}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0b6d539d954adbc41b46eae75dd33a6a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 663dc570a2a083f419cb9896abb6d1ec, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -141,8 +141,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.006940484, y: -0.006940484}
-  m_Size: {x: 0.4169948, y: 0.43087566}
+  m_Offset: {x: 0.00010000542, y: 0.028729811}
+  m_Size: {x: 0.2391431, y: 0.23914322}
   m_Direction: 0
 --- !u!50 &9007063665001768484
 Rigidbody2D:
@@ -183,6 +183,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089641861704e53408caf6793f881135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpDistance: 5
-  accelartionRate: 0.3
-  moveSpeed: 2
+  pickUpType: 2
+  pickUpDistance: 2
+  accelartionRate: 0.2
+  moveSpeed: 1.5
+  animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1.000004
+      value: 0.00236029
+      inSlope: -2.097524
+      outSlope: -2.097524
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.07203771
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  heightY: 1
+  popDuration: 0.5
