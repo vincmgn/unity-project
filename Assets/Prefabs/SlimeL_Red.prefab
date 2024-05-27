@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4671145806165138668}
   - component: {fileID: 4218347103619196471}
   - component: {fileID: 8012232002319425154}
+  - component: {fileID: 7692298633174688068}
   m_Layer: 0
   m_Name: SlimeL_Red
   m_TagString: Untagged
@@ -187,6 +188,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f89064ef4b08c4ca1a2ddfef11696f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 10
+  enemyType: {fileID: 7692298633174688068}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &3669066026695471484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 30
+  knockBackThrust: 15
 --- !u!114 &4218347103619196471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,3 +247,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: a9ff66a56bc0d1e449fc18d9dca2218e, type: 2}
   flashDuration: 0.1
+--- !u!114 &7692298633174688068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3289124319275974834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6cd78305b2cc545baa00ec2afcf7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 4250590219311832058, guid: 3a8346bed37458944a828c67e27daa65, type: 3}

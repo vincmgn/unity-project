@@ -34,6 +34,11 @@ public class EnemyPathfinding : MonoBehaviour
         moveDir = targetPosition;
     }
 
+    public void StopMoving()
+    {
+        moveDir = Vector2.zero;
+    }
+
     private void AdjustEnnemyFacingDirection()
     {
         if (moveDir.x < 0) // vers la gauche
