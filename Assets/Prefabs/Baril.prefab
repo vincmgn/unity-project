@@ -112,7 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 505492e6f2d243c49bedde048dc7fea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goinCoinPrefab: {fileID: 8029046237835210437, guid: 7632c0dfa5076ee40927cd2a59381401, type: 3}
+  goldCoin: {fileID: 8029046237835210437, guid: 7632c0dfa5076ee40927cd2a59381401, type: 3}
+  healthGlobe: {fileID: 8029046237835210437, guid: f0928285143667f40b0a79cdb4807d5d, type: 3}
 --- !u!61 &7920729798717544767
 BoxCollider2D:
   m_ObjectHideFlags: 0
