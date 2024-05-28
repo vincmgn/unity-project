@@ -1187,17 +1187,14 @@ Transform:
   - {fileID: 1702902352}
   - {fileID: 745658892}
   - {fileID: 47555511}
-  - {fileID: 565110885}
-  - {fileID: 1937328848}
-  - {fileID: 470160312}
-  - {fileID: 1367386741}
   - {fileID: 7967333}
   - {fileID: 1381025876}
   - {fileID: 1974804490}
   - {fileID: 238439238}
   - {fileID: 1587649367}
-  - {fileID: 618689625}
   - {fileID: 502059673}
+  - {fileID: 618689625}
+  - {fileID: 1011536691}
   m_Father: {fileID: 860780413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &200854215
@@ -2283,7 +2280,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 166042837}
+  m_Father: {fileID: 1011536691}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &502059672
 PrefabInstance:
@@ -2693,7 +2690,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 166042837}
+  m_Father: {fileID: 1011536691}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &570821733
 GameObject:
@@ -2946,10 +2943,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest
       objectReference: {fileID: 0}
-    - target: {fileID: 3411022497972328190, guid: e95738a82b33e4749a2fd0a5a7f9f460, type: 3}
-      propertyPath: m_TagString
-      value: Teleportation
-      objectReference: {fileID: 0}
+    - target: {fileID: 8445075636253908244, guid: e95738a82b33e4749a2fd0a5a7f9f460, type: 3}
+      propertyPath: teleportActivate
+      value: 
+      objectReference: {fileID: 1011536690}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4555,6 +4552,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977031590}
   m_CullTransparentMesh: 1
+--- !u!1 &1011536690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1011536691}
+  m_Layer: 0
+  m_Name: Teleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1011536691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011536690}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 565110885}
+  - {fileID: 1937328848}
+  - {fileID: 470160312}
+  - {fileID: 1367386741}
+  m_Father: {fileID: 166042837}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1022257130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5356,7 +5388,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 166042837}
+  m_Father: {fileID: 1011536691}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1379962686
 GameObject:
@@ -15473,28 +15505,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 22447610, guid: df93da55c6ab79e40b5edf0196e909b4, type: 3}
   m_PrefabInstance: {fileID: 1676605199}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1702902351 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3411022497972328190, guid: f805cfe9c93c9bd49bef5eeb040a58d2, type: 3}
-  m_PrefabInstance: {fileID: 2477638721620129629}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1702902352 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 642148476564427196, guid: f805cfe9c93c9bd49bef5eeb040a58d2, type: 3}
   m_PrefabInstance: {fileID: 2477638721620129629}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1702902358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1702902351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 010ea6a56d3b4a844bc3689f9cd4fda8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1708876075
 GameObject:
   m_ObjectHideFlags: 0
@@ -19376,7 +19391,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 166042837}
+  m_Father: {fileID: 1011536691}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1940292647
 GameObject:
@@ -20487,10 +20502,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3411022497972328190, guid: f805cfe9c93c9bd49bef5eeb040a58d2, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1702902358}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f805cfe9c93c9bd49bef5eeb040a58d2, type: 3}
 --- !u!1001 &3111029828876640315
 PrefabInstance:
@@ -20748,6 +20760,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 980299506322056589, guid: 0b83ca9153989fa449df7aaaa40a90ff, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2717238035558922835, guid: 0b83ca9153989fa449df7aaaa40a90ff, type: 3}
       propertyPath: teleportStoneSprite
       value: 

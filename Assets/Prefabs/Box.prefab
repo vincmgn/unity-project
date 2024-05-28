@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 642148476564427196}
   - component: {fileID: 212630089990486326}
+  - component: {fileID: 3498260316306603072}
   - component: {fileID: 91689924960620055}
   - component: {fileID: 7920729798717544767}
   - component: {fileID: -506703649744903867}
@@ -87,6 +88,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3498260316306603072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3411022497972328190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 010ea6a56d3b4a844bc3689f9cd4fda8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &91689924960620055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,3 +172,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldCoin: {fileID: 8029046237835210437, guid: 7632c0dfa5076ee40927cd2a59381401, type: 3}
   healthGlobe: {fileID: 8029046237835210437, guid: f0928285143667f40b0a79cdb4807d5d, type: 3}
+  teleportStone: {fileID: 0}
