@@ -38,11 +38,22 @@ public class PlayerController : Singleton<PlayerController>
     {
         playerControls.Player.Dash.performed += _ => Dash();
         startingMoveSpeed = moveSpeed;
+        SetTeleportStone(false);
+
+        if (teleportStoneSprite != null)
+        {
+            teleportStoneSprite.SetActive(false);
+        }
     }
 
     private void OnEnable()
     {
         playerControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerControls.Disable();
     }
 
     private void Update()
@@ -86,9 +97,13 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Move()
     {
+        if (PlayerHealth.Instance.isDead) return; 
+
         if (knockback.GettingKnockedBack) return;
+
         rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
     }
+
 
     public void SetMoveSpeed(float speed)
     {
