@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PickUpSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject goldCoin, healthGlobe;
+    [SerializeField] private GameObject goldCoin, healthGlobe, teleportStone;
 
     public void DropItems()
     {
         int randomNum = Random.Range(1, 4);
 
-        if (randomNum == 1 )
+        if (randomNum == 1)
         {
             Instantiate(healthGlobe, transform.position, Quaternion.identity);
         }
@@ -24,5 +24,10 @@ public class PickUpSpawner : MonoBehaviour
                 Instantiate(goldCoin, transform.position, Quaternion.identity);
             }
         }
+    }
+
+    public void DropTeleportStone()
+    {
+        Instantiate(teleportStone, transform.position, Quaternion.identity);
     }
 }
