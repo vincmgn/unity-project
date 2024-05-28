@@ -11,7 +11,7 @@ public class OpenChest : MonoBehaviour
         if (other.gameObject.GetComponent<DamageSource>())
         {
             GetComponent<PickUpSpawner>().DropTeleportStone();
-            gameObject.SetActive(false);
+            transform.GetChild(0).gameObject.SetActive(false);
             openedSprite.SetActive(true);
         }
     }

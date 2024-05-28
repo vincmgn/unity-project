@@ -9,6 +9,7 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] private float dashSpeed = 4f;
     [SerializeField] private TrailRenderer trailRenderer;
     [SerializeField] private Transform weaponCollider;
+    [SerializeField] private GameObject teleportStoneSprite;
 
     private PlayerControls playerControls;
     private Vector2 movement;
@@ -19,6 +20,7 @@ public class PlayerController : Singleton<PlayerController>
     private Knockback knockback;
 
     private bool isDashing;
+    private bool haveTeleportStone;
 
     protected override void Awake()
     {
@@ -123,6 +125,17 @@ public class PlayerController : Singleton<PlayerController>
             trailRenderer.emitting = true;
             StartCoroutine(DashCooldown());
         }
+    }
+
+    public void SetTeleportStone(bool value)
+    {
+        haveTeleportStone = value;
+        teleportStoneSprite.SetActive(value);
+    }
+
+    public bool GetTeleportStone()
+    {
+        return haveTeleportStone;
     }
 
     private IEnumerator DashCooldown()
