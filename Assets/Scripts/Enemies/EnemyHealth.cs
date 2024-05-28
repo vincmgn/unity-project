@@ -43,6 +43,7 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             animator.SetTrigger("Death");
+            GetComponent<PickUpSpawner>().DropItems();
             StartCoroutine(DestroyAfterAnimation()); // delai avant de détruire l'objet
         }
     }

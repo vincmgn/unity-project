@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4218347103619196471}
   - component: {fileID: 8012232002319425154}
   - component: {fileID: 7692298633174688068}
+  - component: {fileID: -8135066681071480122}
   m_Layer: 0
   m_Name: SlimeL_Red
   m_TagString: Untagged
@@ -269,3 +270,17 @@ MonoBehaviour:
   restTime: 1
   stagger: 1
   oscillate: 1
+--- !u!114 &-8135066681071480122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3289124319275974834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505492e6f2d243c49bedde048dc7fea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldCoin: {fileID: 8029046237835210437, guid: 7632c0dfa5076ee40927cd2a59381401, type: 3}
+  healthGlobe: {fileID: 8029046237835210437, guid: f0928285143667f40b0a79cdb4807d5d, type: 3}
