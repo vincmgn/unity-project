@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -130,8 +131,13 @@ public class PlayerController : Singleton<PlayerController>
     public void SetTeleportStone(bool value)
     {
         haveTeleportStone = value;
-        teleportStoneSprite.SetActive(value);
+
+        if (teleportStoneSprite != null)
+        {
+            teleportStoneSprite.SetActive(value);
+        }
     }
+
 
     public bool GetTeleportStone()
     {
@@ -147,5 +153,12 @@ public class PlayerController : Singleton<PlayerController>
         yield return new WaitForSeconds(dashCooldown);
         isDashing = false;
         trailRenderer.emitting = false;
+    }
+
+    internal void ResetPlayer()
+    {
+        SetTeleportStone(false);
+        PlayerHealth.Instance.ResetHealth();
+        EconomyManager.Instance.ResetCurrency();
     }
 }

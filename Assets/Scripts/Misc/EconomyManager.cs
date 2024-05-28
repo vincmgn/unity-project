@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -17,6 +18,16 @@ public class EconomyManager : Singleton<EconomyManager>
         if (goldText == null) {
             goldText = GameObject.Find(COIN_AMOUNT_TEXT).GetComponent<TMP_Text>();
         }
+        goldText.text = currentGold.ToString("D3");
+    }
+
+    internal void ResetCurrency()
+    {
+        if (goldText == null)
+        {
+            goldText = GameObject.Find(COIN_AMOUNT_TEXT).GetComponent<TMP_Text>();
+        }
+        currentGold = 0;
         goldText.text = currentGold.ToString("D3");
     }
 }

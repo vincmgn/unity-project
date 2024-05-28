@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
     public string menuSceneName;
     public GameObject pauseButton;
 
-    public void Pause ()
+    public void Pause()
     {
         PauseMenuPanel.SetActive(true);
         pauseButton.SetActive(false);
@@ -27,13 +27,17 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(gameSceneName);
+        PlayerController.Instance.ResetPlayer();
         PauseMenuPanel.SetActive(false);
         pauseButton.SetActive(true);
     }
 
     public void BackToMenu()
     {
+        PlayerController.Instance.ResetPlayer();
         Time.timeScale = 1f;
         SceneManager.LoadScene(menuSceneName);
+        PauseMenuPanel.SetActive(false);
+        pauseButton.SetActive(false);
     }
 }
