@@ -262,12 +262,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4250590219311832058, guid: 3a8346bed37458944a828c67e27daa65, type: 3}
   bulletMoveSpeed: 6
-  burstCount: 8
+  burstCount: 5
   projectilesPerBurst: 10
   angleSpread: 170
   startingDistance: 1
   timeBetweenBursts: 1
-  restTime: 1
+  restTime: 2
   stagger: 1
   oscillate: 1
 --- !u!114 &-8135066681071480122
@@ -284,3 +284,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldCoin: {fileID: 8029046237835210437, guid: 7632c0dfa5076ee40927cd2a59381401, type: 3}
   healthGlobe: {fileID: 8029046237835210437, guid: f0928285143667f40b0a79cdb4807d5d, type: 3}
+  teleportStone: {fileID: 0}

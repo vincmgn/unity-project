@@ -26,7 +26,6 @@ public class PlayerRespawn : MonoBehaviour
                 PlayerController.Instance.transform.position = respawnPoint.transform.position;
                 CameraController.Instance.SetPlayerCameraFollow();
                 UIFade.Instance.FadeToClear();
-
             }
             else
             {

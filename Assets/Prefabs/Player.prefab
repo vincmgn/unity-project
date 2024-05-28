@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4354959421279238805}
-  - component: {fileID: 4540560445489620667}
   - component: {fileID: 2235316388852839813}
   m_Layer: 0
   m_Name: Active Weapon
@@ -34,18 +33,6 @@ Transform:
   - {fileID: 3083592553318029312}
   m_Father: {fileID: 7409983347075130370}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4540560445489620667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1137654496800887844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c9f7e05322075f44ba39cc782bec7be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2235316388852839813
 MonoBehaviour:
   m_ObjectHideFlags: 0
