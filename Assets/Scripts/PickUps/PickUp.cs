@@ -97,7 +97,7 @@ public class Pickup : MonoBehaviour
                 Debug.Log("Picked up a health globe!");
                 break;
             case PickUpType.TeleportStone:
-                // ajouter à l'inventaire
+                PlayerController.Instance.SetTeleportStone(true);
                 Debug.Log("Picked up a teleport stone!");
                 break;
         }

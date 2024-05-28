@@ -20972,6 +20972,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2717238035558922835, guid: 0b83ca9153989fa449df7aaaa40a90ff, type: 3}
+      propertyPath: teleportStoneSprite
+      value: 
+      objectReference: {fileID: 29100214}
     - target: {fileID: 3080828170145164560, guid: 0b83ca9153989fa449df7aaaa40a90ff, type: 3}
       propertyPath: m_Name
       value: Player
