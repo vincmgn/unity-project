@@ -2895,6 +2895,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest
       objectReference: {fileID: 0}
+    - target: {fileID: 3411022497972328190, guid: e95738a82b33e4749a2fd0a5a7f9f460, type: 3}
+      propertyPath: m_TagString
+      value: Teleportation
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
