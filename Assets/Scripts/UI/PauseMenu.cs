@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -27,8 +28,14 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(gameSceneName);
+        GameManager.Instance.ResetGame();
+        AudioManager.Instance.ResetAudio();
         PlayerController.Instance.ResetPlayer();
+        pauseButton.SetActive(false);
         PauseMenuPanel.SetActive(false);
+        PauseMenuPanel.transform.GetChild(1).GetChild(0).GetChild(1).GetChild(0).gameObject.SetActive(true);
+        PauseMenuPanel.transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = "PAUSED";
+
         pauseButton.SetActive(true);
     }
 

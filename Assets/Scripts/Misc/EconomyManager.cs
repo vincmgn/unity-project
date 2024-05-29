@@ -21,7 +21,7 @@ public class EconomyManager : Singleton<EconomyManager>
         goldText.text = currentGold.ToString("D3");
     }
 
-    internal void ResetCurrency()
+    public void ResetCurrency()
     {
         if (goldText == null)
         {
