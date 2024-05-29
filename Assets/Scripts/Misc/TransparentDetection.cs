@@ -22,12 +22,16 @@ public class TransparentDetection : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            if (spriteRenderer)
+            if (gameObject.activeInHierarchy) // Vérifie si l'objet est actif dans la hiérarchie
             {
-                StartCoroutine(FadeRoutine(spriteRenderer, fadeTime, spriteRenderer.color.a, transparencyAmount));
-            } else if (tilemap)
-            {
-                StartCoroutine(FadeRoutine(tilemap, fadeTime, tilemap.color.a, transparencyAmount));
+                if (spriteRenderer)
+                {
+                    StartCoroutine(FadeRoutine(spriteRenderer, fadeTime, spriteRenderer.color.a, transparencyAmount));
+                }
+                else if (tilemap)
+                {
+                    StartCoroutine(FadeRoutine(tilemap, fadeTime, tilemap.color.a, transparencyAmount));
+                }
             }
         }
     }
@@ -36,12 +40,16 @@ public class TransparentDetection : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            if (spriteRenderer)
+            if (gameObject.activeInHierarchy)
             {
-                StartCoroutine(FadeRoutine(spriteRenderer, fadeTime, spriteRenderer.color.a, 1));
-            } else if (tilemap)
-            {
-                StartCoroutine(FadeRoutine(tilemap, fadeTime, tilemap.color.a, 1));
+                if (spriteRenderer)
+                {
+                    StartCoroutine(FadeRoutine(spriteRenderer, fadeTime, spriteRenderer.color.a, 1));
+                }
+                else if (tilemap)
+                {
+                    StartCoroutine(FadeRoutine(tilemap, fadeTime, tilemap.color.a, 1));
+                }
             }
         }
     }

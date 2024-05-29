@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerHealth : Singleton<PlayerHealth>
 {
@@ -13,6 +14,8 @@ public class PlayerHealth : Singleton<PlayerHealth>
     [SerializeField] private float knockBackThrustAmount = 10f;
     [SerializeField] private float damageRecoveryTime = 1f;
     [SerializeField] private AudioClip openSound = null;
+    [SerializeField] private GameObject MenuPausePanel = null;
+    [SerializeField] private GameObject PauseButton = null;
 
     private Slider healthSlider;
     private int currentHealth;
@@ -21,7 +24,6 @@ public class PlayerHealth : Singleton<PlayerHealth>
     private Flash flash;
 
     const string HEART_SLIDER_TEXT = "Heart Slider";
-    const string TOWN_TEXT = "Victory";
     readonly int DEATH_HASH = Animator.StringToHash("Death");
 
     protected override void Awake()
@@ -76,6 +78,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
         {
             isDead = true;
             currentHealth = 0;
+            PlayerController.Instance.SetTeleportStone(false);
             if (openSound != null)
             {
                 GetComponent<AudioSource>().PlayOneShot(openSound);
@@ -87,10 +90,27 @@ public class PlayerHealth : Singleton<PlayerHealth>
 
     private IEnumerator DeathRoutine()
     {
+
         yield return new WaitForSeconds(3.5f);
-        Destroy(gameObject);
-        SceneManager.LoadScene(TOWN_TEXT);
+
+        MenuPausePanel.SetActive(true);
+        MenuPausePanel.transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = "GAME OVER !!";
+        MenuPausePanel.transform.GetChild(1).GetChild(0).GetChild(1).GetChild(0).gameObject.SetActive(false);
+        PauseButton.SetActive(false);
+        Time.timeScale = 0;
     }
+
+    public void Win()
+    {
+        MenuPausePanel.SetActive(true);
+        MenuPausePanel.transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = "YOU WIN !!";
+        MenuPausePanel.transform.GetChild(1).GetChild(0).GetChild(1).GetChild(0).gameObject.SetActive(false);
+        PauseButton.SetActive(false);
+        Time.timeScale = 0;
+        PlayerController.Instance.SetTeleportStone(false);
+    }
+
+
 
     private IEnumerator DamageRecoveryRoutine()
     {
@@ -112,6 +132,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     internal void ResetHealth()
     {
         currentHealth = maxHealth;
+        isDead = false;
         UpdateHealthSlider();
     }
 }

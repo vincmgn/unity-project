@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
-
+public class AudioManager : Singleton<AudioManager>
 {
+    [SerializeField] private GameObject audioObject;
     [SerializeField] public GameObject music;
     [SerializeField] public GameObject cross;
 
@@ -43,4 +41,20 @@ public class AudioManager : MonoBehaviour
         cross.SetActive(false);
         isMuted = false;
     }
+
+    public void ResetAudio()
+    {
+        UnMute();
+        AudioSource audioSource = audioObject.GetComponent<AudioSource>();
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource not found on music GameObject.");
+        }
+    }
+
 }

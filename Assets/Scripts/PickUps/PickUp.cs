@@ -90,15 +90,12 @@ public class Pickup : MonoBehaviour
         {
             case PickUpType.GoldCoin:
                 EconomyManager.Instance.UpdateCurrentGold();
-                Debug.Log("Picked up a gold coin!");
                 break;
             case PickUpType.HealthGlobe:
                 PlayerHealth.Instance.HealPlayer();
-                Debug.Log("Picked up a health globe!");
                 break;
             case PickUpType.TeleportStone:
                 PlayerController.Instance.SetTeleportStone(true);
-                Debug.Log("Picked up a teleport stone!");
                 break;
         }
     }

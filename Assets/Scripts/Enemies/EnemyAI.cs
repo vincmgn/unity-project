@@ -59,7 +59,14 @@ public class EnemyAI : MonoBehaviour
     {
         timeRoaming += Time.deltaTime;
 
-        enemyPathfinding.MoveTo(roamPosition);
+        if (enemyPathfinding != null)
+        {
+            enemyPathfinding.MoveTo(roamPosition);
+        }
+        else
+        {
+            Debug.LogWarning("EnemyPathfinding component not found on " + gameObject.name);
+        }
 
         if (Vector2.Distance(transform.position, PlayerController.Instance.transform.position) < attackRange)
         {
@@ -71,6 +78,7 @@ public class EnemyAI : MonoBehaviour
             roamPosition = GetRoamingPosition();
         }
     }
+
 
     private void Attacking()
     {
