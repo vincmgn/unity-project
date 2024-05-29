@@ -74,6 +74,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Attacking()
     {
+        if (PlayerHealth.Instance.isDead) { return; }
         if (Vector2.Distance(transform.position, PlayerController.Instance.transform.position) > attackRange)
         {
             state = State.Roaming;

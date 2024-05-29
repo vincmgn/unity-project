@@ -38,6 +38,7 @@ public class Teleportation : MonoBehaviour
         }
 
         PlayerController.Instance.ResetMoveSpeed();
+        PlayerController.Instance.SetTeleportStone(false);
         SceneManager.LoadScene(targetScene);
     }
 }
