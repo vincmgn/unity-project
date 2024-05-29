@@ -10,7 +10,7 @@ public class Teleportation : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && PlayerController.Instance.GetTeleportStone())
+        if (other.CompareTag("Player") && PlayerController.Instance.GetTeleportStone() && ActiveInventory.Instance.GetSlot() == 1)
         {
             PlayerPrefs.SetString("RespawnPoint", respawnPointName);
             PlayerController.Instance.SetMoveSpeed(0.3f);

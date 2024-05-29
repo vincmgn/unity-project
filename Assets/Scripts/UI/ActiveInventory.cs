@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class ActiveInventory : MonoBehaviour
 {
+    private static ActiveInventory _instance;
+    public static ActiveInventory Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<ActiveInventory>();
+            }
+            return _instance;
+        }
+    }
+
     private int activeSlotIndexNum = 0;
 
     private PlayerControls playerControls;
@@ -27,6 +40,11 @@ public class ActiveInventory : MonoBehaviour
     private void ToggleActiveSlot(int numValue)
     {
         ToggleActiveHighlight(numValue - 1);
+    }
+
+    public int GetSlot()
+    {
+        return activeSlotIndexNum;
     }
 
     private void ToggleActiveHighlight(int indexNum)
