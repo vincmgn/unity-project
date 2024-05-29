@@ -4,9 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class Teleportation : MonoBehaviour
 {
+    [SerializeField] private AudioClip openSound = null;
+
     public string targetScene;
     public string respawnPointName;
     private float waitToLoadTime = 1f;
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -14,6 +17,13 @@ public class Teleportation : MonoBehaviour
         {
             PlayerPrefs.SetString("RespawnPoint", respawnPointName);
             PlayerController.Instance.SetMoveSpeed(0.3f);
+            if (openSound != null)
+            {
+                GetComponent<AudioSource>().PlayOneShot(openSound);
+            } else
+            {
+                Debug.LogWarning("No open sound attached to " + gameObject.name);
+            }
             UIFade.Instance.FadeToBlack();
             StartCoroutine(LoadSceneRoutine());
         }
