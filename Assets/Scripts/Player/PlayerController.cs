@@ -172,7 +172,6 @@ public class PlayerController : Singleton<PlayerController>
 
     internal void ResetPlayer()
     {
-        SetTeleportStone(false);
         PlayerHealth.Instance.ResetHealth();
         EconomyManager.Instance.ResetCurrency();
     }

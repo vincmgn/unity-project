@@ -863,7 +863,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.904777, y: 0.85657, z: -10}
+  m_LocalPosition: {x: 6.9055724, y: 0.85657, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2736,7 +2736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSound: {fileID: 8300000, guid: 12be714586ca66847a27990237c41bc5, type: 3}
-  targetScene: Victory
+  targetScene: EntryGame
   respawnPointName: SpawnPoint
 --- !u!1 &1375794525
 GameObject:

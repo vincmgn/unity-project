@@ -15,17 +15,23 @@ public class Teleportation : MonoBehaviour
     {
         if (other.CompareTag("Player") && PlayerController.Instance.GetTeleportStone() && ActiveInventory.Instance.GetSlot() == 1)
         {
-            PlayerPrefs.SetString("RespawnPoint", respawnPointName);
-            PlayerController.Instance.SetMoveSpeed(0.3f);
-            if (openSound != null)
+            if (targetScene == "EntryGame")
             {
-                GetComponent<AudioSource>().PlayOneShot(openSound);
-            } else
-            {
-                Debug.LogWarning("No open sound attached to " + gameObject.name);
+                PlayerHealth.Instance.Win();
+            } else {
+                PlayerPrefs.SetString("RespawnPoint", respawnPointName);
+                PlayerController.Instance.SetMoveSpeed(0.3f);
+                if (openSound != null)
+                {
+                    GetComponent<AudioSource>().PlayOneShot(openSound);
+                }
+                else
+                {
+                    Debug.LogWarning("No open sound attached to " + gameObject.name);
+                }
+                UIFade.Instance.FadeToBlack();
+                StartCoroutine(LoadSceneRoutine());
             }
-            UIFade.Instance.FadeToBlack();
-            StartCoroutine(LoadSceneRoutine());
         }
     }
 
@@ -39,6 +45,7 @@ public class Teleportation : MonoBehaviour
 
         PlayerController.Instance.ResetMoveSpeed();
         PlayerController.Instance.SetTeleportStone(false);
+        ActiveInventory.Instance.ResetSlot();
         SceneManager.LoadScene(targetScene);
     }
 }

@@ -47,6 +47,11 @@ public class ActiveInventory : MonoBehaviour
         return activeSlotIndexNum;
     }
 
+    public void ResetSlot()
+    {
+        ToggleActiveHighlight(0);
+    }
+
     private void ToggleActiveHighlight(int indexNum)
     {
         activeSlotIndexNum = indexNum;
