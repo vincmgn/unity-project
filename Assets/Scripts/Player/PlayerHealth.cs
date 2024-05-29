@@ -12,6 +12,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     [SerializeField] private int maxHealth = 3;
     [SerializeField] private float knockBackThrustAmount = 10f;
     [SerializeField] private float damageRecoveryTime = 1f;
+    [SerializeField] private AudioClip openSound = null;
 
     private Slider healthSlider;
     private int currentHealth;
@@ -75,6 +76,10 @@ public class PlayerHealth : Singleton<PlayerHealth>
         {
             isDead = true;
             currentHealth = 0;
+            if (openSound != null)
+            {
+                GetComponent<AudioSource>().PlayOneShot(openSound);
+            }
             GetComponent<Animator>().SetTrigger(DEATH_HASH);
             StartCoroutine(DeathRoutine());
         }
