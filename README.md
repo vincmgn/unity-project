@@ -46,3 +46,9 @@ Mutant slimes will be after you, with 3 different types, each with unique abilit
   - When a player or enemy takes damage (Flash)
 - **UI animation**:
   - Slider implemented to represent the player's health, dynamically animated
+
+## 🚀 Release
+
+I have made a [release](https://github.com/vincmgn/unity-project/releases/tag/EXE) with a build of the project, including an executable **[unity-project.exe]**.
+
+
